@@ -1,8 +1,11 @@
 // Türkçe çeviriler
 const tr = {
   // Genel
-  appTitle: "Dark Skorbord",
+  appTitle: "Dart Skorbord",
   appSubtitle: "Profesyonel Dart Skorboard Uygulaması",
+  theme: "Tema",
+  lightTheme: "☀️ Gündüz",
+  darkTheme: "🌙 Gece",
   
   // Ana Menü
   newGame: "Yeni Oyun Başlat",
@@ -73,8 +76,11 @@ const tr = {
 // İngilizce çeviriler
 const en = {
   // General
-  appTitle: "Dark Skorbord",
+  appTitle: "Dart Skorbord",
   appSubtitle: "Professional Dart Scoreboard Application",
+  theme: "Theme",
+  lightTheme: "☀️ Light",
+  darkTheme: "🌙 Dark",
   
   // Main Menu
   newGame: "Start New Game",
@@ -151,7 +157,7 @@ const i18n = {
   setLanguage(lang) {
     if (this.translations[lang]) {
       this.currentLang = lang;
-      localStorage.setItem('darkskorbord_lang', lang);
+      localStorage.setItem('dartskorbord_lang', lang);
       this.updateUI();
     }
   },
@@ -163,7 +169,7 @@ const i18n = {
   
   // Dili başlat
   init() {
-    const savedLang = localStorage.getItem('darkskorbord_lang');
+    const savedLang = localStorage.getItem('dartskorbord_lang');
     if (savedLang && this.translations[savedLang]) {
       this.currentLang = savedLang;
     }

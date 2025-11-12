@@ -15,6 +15,46 @@ function changeLanguage(lang) {
   i18n.setLanguage(lang);
 }
 
+// ============ TEMA YÖNETİMİ ============
+
+// Tema durumunu localStorage'dan yükle veya varsayılan olarak 'dark' kullan
+function loadTheme() {
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeButton(savedTheme);
+}
+
+// Tema değiştir
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeButton(newTheme);
+}
+
+// Tema butonunu güncelle
+function updateThemeButton(theme) {
+  const themeIcon = document.querySelector('.theme-icon');
+  const themeText = document.getElementById('themeText');
+  
+  if (theme === 'light') {
+    themeIcon.textContent = '☀️';
+    themeText.setAttribute('data-i18n', 'lightTheme');
+    themeText.textContent = i18n.t('lightTheme');
+  } else {
+    themeIcon.textContent = '🌙';
+    themeText.setAttribute('data-i18n', 'darkTheme');
+    themeText.textContent = i18n.t('darkTheme');
+  }
+}
+
+// Sayfa yüklendiğinde temayı yükle
+document.addEventListener('DOMContentLoaded', function() {
+  loadTheme();
+});
+
 // ============ BİTİŞ LİMİTİ YÖNETİMİ ============
 
 // Bitiş limitini ayarla

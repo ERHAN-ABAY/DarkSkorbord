@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dark Skorbord - Dart Skorboard</title>
+  <title>Dart Skorbord</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Tema Toggle Butonu -->
+  <div class="theme-toggle">
+    <button class="theme-toggle-btn" onclick="toggleTheme()" id="themeToggleBtn">
+      <span class="theme-icon">🌙</span>
+      <span id="themeText" data-i18n="darkTheme">Gece</span>
+    </button>
+  </div>
+
   <div class="container">
     <header>
-      <h1 data-i18n="appTitle">🎯 Dark Skorbord</h1>
+      <h1 data-i18n="appTitle">🎯 Dart Skorbord</h1>
       <p class="subtitle" data-i18n="appSubtitle">Profesyonel Dart Skorboard Uygulaması</p>
       
       <!-- Dil Seçici -->

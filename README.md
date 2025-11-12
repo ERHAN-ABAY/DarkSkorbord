@@ -13,9 +13,10 @@ Modern ve kullanıcı dostu bir dart skorboard uygulaması. 1-4 oyuncu desteği,
 
 ### Arayüz Özellikleri
 - 🌍 **Çoklu Dil** - Türkçe ve İngilizce destek
+- 🎨 **Tema Seçenekleri** - Gündüz (Light) ve Gece (Dark) temaları
 - ⌨️ **Sayısal Klavye** - Hızlı ve kolay skor girişi
 - 📱 **Responsive Tasarım** - Mobil ve masaüstü uyumlu
-- 🎨 **Modern UI** - Dark tema ile göz yormayan arayüz
+- � **Modern UI** - Göz yormayan kullanıcı arayüzü
 
 ### Teknik Özellikler
 - 💾 **SQLite Veritabanı** - Yerel veri saklama
@@ -32,8 +33,8 @@ Modern ve kullanıcı dostu bir dart skorboard uygulaması. 1-4 oyuncu desteği,
 
 ```bash
 # Depoyu klonlayın
-git clone https://github.com/ERHAN-ABAY/DarkSkorbord.git
-cd DarkSkorbord
+git clone https://github.com/ERHAN-ABAY/DartSkorbord.git
+cd DartSkorbord
 
 # Bağımlılıkları yükleyin
 npm install
@@ -69,18 +70,25 @@ npm run dev
 - Negatif puan = BUST (tur iptal)
 - Son atışı geri alabilirsiniz
 
-## � Ekran Görüntüleri
+## 📱 Ekran Görüntüleri
 
 ### Ana Menü
 - Yeni oyun başlatma
 - Oyun geçmişi görüntüleme
 - Dil seçimi (TR/EN)
+- Tema değiştirme (☀️ Gündüz / 🌙 Gece)
 
 ### Oyun Ekranı
 - Oyuncu skorları
 - Sıradaki oyuncu göstergesi
 - Sayısal klavye
 - Atış geri alma butonu
+
+### Tema Özellikleri
+- **Gece Teması (Varsayılan)** - Koyu mavi tonlar, göz yormaz
+- **Gündüz Teması** - Açık renkler, parlak ortamlara uygun
+- **Otomatik Kayıt** - Tema tercihiniz tarayıcıda saklanır
+- **Tek Tık** - Sağ üst köşeden hızlı tema değiştirme
 
 ### Oyun Geçmişi
 - Son 10 oyun
@@ -194,7 +202,7 @@ CREATE TABLE throws (
 ## 📂 Proje Yapısı
 
 ```
-DarkSkorbord/
+DartSkorbord/
 ├── src/
 │   ├── database/
 │   │   ├── schema.sql       # Veritabanı şeması
@@ -253,6 +261,7 @@ DarkSkorbord/
 
 ### v1.2.0 (Mevcut)
 - ✅ Çoklu dil desteği (TR/EN)
+- ✅ Gündüz/Gece tema desteği
 - ✅ Sayısal klavye
 - ✅ Özel bitiş limiti girişi
 
