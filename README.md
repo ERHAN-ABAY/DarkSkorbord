@@ -1,4 +1,4 @@
-# 🎯 Dark Skorbord
+# 🎯 Dart Skorbord
 
 Modern ve kullanıcı dostu bir dart skorboard uygulaması. 1-4 oyuncu desteği, çoklu dil seçeneği ve detaylı oyun geçmişi takibi ile dart oyununuzu bir üst seviyeye taşıyın.
 
